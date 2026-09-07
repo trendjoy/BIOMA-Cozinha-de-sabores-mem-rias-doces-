@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BIOMA — Cozinha de sabores &amp; memórias doces</title>
+<meta name="description" content="BIOMA: um Brasil de sabores em cada criação. Pratos executivos e sobremesas artesanais feitos com técnica e cuidado, direto da cozinha profissional para a sua mesa. Peça pelo delivery ou WhatsApp.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="BIOMA — Cozinha de sabores &amp; memórias doces">
+<meta property="og:description" content="Um Brasil de sabores em cada criação. Pratos executivos e sobremesas artesanais preparados com técnica, sabor e cuidado. Peça agora pelo delivery.">
+<meta property="og:image" content="[ADICIONAR IMAGEM DE COMPARTILHAMENTO — 1200x630px]">
+<meta property="og:locale" content="pt_BR">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23171310%22/><path d=%22M50 16C34 24 24 38 24 54c0 14 12 24 26 24s26-10 26-24c0-16-10-30-26-38Z%22 fill=%22none%22 stroke=%22%23B99A4E%22 stroke-width=%224%22/><path d=%22M50 22v58%22 stroke=%22%23B99A4E%22 stroke-width=%223%22/></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "BIOMA",
+  "slogan": "Cozinha de sabores & memórias doces",
+  "servesCuisine": "Gastronomia contemporânea",
+  "priceRange": "$$",
+  "founder": [
+    { "@type": "Person", "name": "Rodrigo Martins", "jobTitle": "Chef / Gastrônomo" },
+    { "@type": "Person", "name": "Laudja Pessoa", "jobTitle": "Confeiteira" }
+  ],
+  "menu": "[ADICIONAR LINK DO CARDÁPIO]",
+  "telephone": "[ADICIONAR TELEFONE]",
+  "sameAs": ["INSTAGRAM_LINK"]
+}
+</script>
+
+<style>
+  :root{
+    --bg: #171310;
+    --bg-alt: #0F0C0A;
+    --surface: #221B15;
+    --surface-2: #2B231C;
+    --cream: #F1E7D6;
+    --cream-dim: #C9BB9F;
+    --clay: #A65A34;
+    --clay-dark: #7C4025;
+    --gold: #B99A4E;
+    --ink: #2A2119;
+    --line: rgba(241,231,214,0.13);
+    --line-strong: rgba(241,231,214,0.22);
+
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Work Sans', -apple-system, sans-serif;
+
+    --wrap: 1180px;
+    --pad: clamp(20px, 5vw, 64px);
+    --radius: 4px;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+    *{ animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  }
+
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--cream);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img, svg{ display:block; max-width:100%; }
+  a{ color: inherit; text-decoration: none; }
+  button{ font-family: inherit; cursor: pointer; }
+
+  h1,h2,h3,h4{
+    font-family: var(--font-display);
+    font-weight: 500;
+    line-height: 1.1;
+    margin: 0;
+    color: var(--cream);
+  }
+
+  p{ margin: 0; }
+
+  .wrap{
+    max-width: var(--wrap);
+    margin: 0 auto;
+    padding-left: var(--pad);
+    padding-right: var(--pad);
+  }
+
+  section{ position: relative; }
+
+  :focus-visible{
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+  }
+
+  /* ---------- Botões ---------- */
+  .btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 15px 30px;
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    border: 1px solid transparent;
+    transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease;
+    white-space: nowrap;
+  }
+  .btn:hover{ transform: translateY(-1px); }
+  .btn-primary{
+    background: var(--clay);
+    color: var(--cream);
+  }
+  .btn-primary:hover{ background: var(--clay-dark); }
+  .btn-ghost{
+    background: transparent;
+    border-color: var(--line-strong);
+    color: var(--cream);
+  }
+  .btn-ghost:hover{ border-color: var(--gold); color: var(--gold); }
+  .btn-block{ width: 100%; }
+
+  /* ---------- Header ---------- */
+  .site-header{
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(15,12,10,0.86);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .site-header .wrap{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    height: 76px;
+  }
+  .logo{
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    letter-spacing: 0.01em;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+  }
+  .logo span{ color: var(--gold); }
+  .brand-mark{ color: var(--gold); flex-shrink: 0; }
+
+  /* Divisor orgânico — usado uma única vez, entre o hero e o cardápio */
+  .organic-divider{
+    display:block;
+    width:100%;
+    height: auto;
+    color: var(--line-strong);
+  }
+  .organic-divider path{ opacity: 0.9; }
+  .nav-links{
+    display:flex;
+    gap: 32px;
+    list-style:none;
+    margin:0; padding:0;
+    font-size: 0.92rem;
+    color: var(--cream-dim);
+  }
+  .nav-links a:hover{ color: var(--cream); }
+  .header-cta{ display:flex; align-items:center; gap:14px; }
+  .nav-toggle{
+    display:none;
+    background:none; border:none; color: var(--cream);
+    width: 40px; height: 40px;
+  }
+
+  @media (max-width: 860px){
+    .nav-links{ display:none; }
+    .header-cta .btn-ghost{ display:none; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    min-height: 92vh;
+    display:flex;
+    align-items:flex-end;
+    background: linear-gradient(180deg, rgba(15,12,10,0.15) 0%, rgba(15,12,10,0.55) 60%, rgba(15,12,10,0.95) 100%), var(--bg-alt);
+    padding-top: 60px;
+  }
+  .hero-media{
+    position:absolute; inset:0; z-index:-1;
+    overflow:hidden;
+  }
+  .img-frame{
+    width:100%; height:100%;
+    display:flex; align-items:center; justify-content:center;
+    background:
+      repeating-linear-gradient(45deg, rgba(241,231,214,0.035) 0 2px, transparent 2px 14px),
+      linear-gradient(160deg, #2B231C, #171310);
+    border: 1px solid var(--line);
+    color: var(--cream-dim);
+    text-align:center;
+    padding: 20px;
+  }
+  .img-frame .frame-label{
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+    max-width: 260px;
+  }
+  .img-frame svg{ width: 34px; height:34px; margin: 0 auto 12px; opacity:0.6; }
+
+  .hero .wrap{
+    padding-bottom: clamp(48px, 8vw, 96px);
+    padding-top: clamp(48px, 8vw, 96px);
+  }
+  .hero-inner{ max-width: 620px; }
+  .hero-kicker{
+    color: var(--gold);
+    font-size: 0.95rem;
+    margin-bottom: 18px;
+    display:block;
+  }
+  .hero h1{
+    font-size: clamp(2.4rem, 5.6vw, 4.2rem);
+    margin-bottom: 22px;
+  }
+  .hero p.lede{
+    font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+    color: var(--cream-dim);
+    max-width: 480px;
+    margin-bottom: 34px;
+  }
+  .hero-actions{ display:flex; gap: 16px; flex-wrap: wrap; }
+
+  /* ---------- Section headings ---------- */
+  .section-head{
+    max-width: 620px;
+    margin-bottom: clamp(36px, 6vw, 56px);
+  }
+  .section-tag{
+    color: var(--clay);
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.05rem;
+    display:block;
+    margin-bottom: 10px;
+  }
+  .section-head h2{ font-size: clamp(1.9rem, 4vw, 2.7rem); }
+  .section-head p{ color: var(--cream-dim); margin-top: 16px; font-size: 1.05rem; max-width: 540px; }
+
+  .section-pad{ padding: clamp(64px, 10vw, 112px) 0; }
+  .section-alt{ background: var(--bg-alt); }
+
+  /* ---------- Produtos ---------- */
+  .product-group{ margin-bottom: 64px; }
+  .product-group:last-child{ margin-bottom: 0; }
+  .product-group-title{
+    display:flex; align-items:baseline; justify-content:space-between; gap: 20px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 16px;
+  }
+  .product-group-title h3{ font-size: clamp(1.4rem, 2.6vw, 1.8rem); }
+  .product-group-title .count{ color: var(--cream-dim); font-size: 0.9rem; }
+
+  .product-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+  .product-grid.is-desserts{ grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 940px){
+    .product-grid{ grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 620px){
+    .product-grid{ grid-template-columns: 1fr; }
+  }
+
+  .product-card{
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display:flex;
+    flex-direction:column;
+  }
+  .product-card.is-featured{
+    grid-column: span 2;
+  }
+  @media (max-width: 940px){ .product-card.is-featured{ grid-column: span 2; } }
+  @media (max-width: 620px){ .product-card.is-featured{ grid-column: span 1; } }
+
+  .product-card .img-frame{ aspect-ratio: 4/3; border: none; border-bottom: 1px solid var(--line); }
+  .product-card.is-featured .img-frame{ aspect-ratio: 16/9; }
+
+  .product-body{ padding: 20px; display:flex; flex-direction:column; gap: 10px; flex:1; }
+  .product-top{ display:flex; justify-content:space-between; gap: 12px; align-items:flex-start; }
+  .product-body h4{ font-size: 1.15rem; }
+  .product-price{ color: var(--gold); font-weight: 600; white-space:nowrap; font-family: var(--font-body); }
+  .product-desc{ color: var(--cream-dim); font-size: 0.94rem; flex:1; }
+  .product-tag{
+    display:inline-block;
+    font-size: 0.72rem;
+    color: var(--clay);
+    border: 1px solid var(--clay-dark);
+    padding: 3px 9px;
+    border-radius: 999px;
+    width: fit-content;
+  }
+  .product-order{
+    margin-top: 8px;
+    text-align:center;
+    padding: 11px 18px;
+    font-size: 0.88rem;
+  }
+  .product-unavailable{
+    opacity: 0.55;
+  }
+  .product-unavailable .product-order{
+    pointer-events:none;
+    background: var(--surface-2);
+    color: var(--cream-dim);
+  }
+
+  /* ---------- Por que nossa comida ---------- */
+  .why-grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  @media (max-width: 900px){ .why-grid{ grid-template-columns: repeat(2,1fr); } }
+  @media (max-width: 540px){ .why-grid{ grid-template-columns: 1fr; } }
+  .why-item{
+    background: var(--bg);
+    padding: 34px 28px;
+  }
+  .why-item h4{ font-size: 1.15rem; margin-bottom: 12px; color: var(--gold); font-style: italic; }
+  .why-item p{ color: var(--cream-dim); font-size: 0.95rem; }
+
+  /* ---------- Pessoas (chef / confeiteira) ---------- */
+  .person{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(30px, 6vw, 72px);
+    align-items:center;
+  }
+  .person.reverse .person-media{ order: 2; }
+  @media (max-width: 860px){
+    .person{ grid-template-columns: 1fr; }
+    .person.reverse .person-media{ order: 0; }
+  }
+  .person-media .img-frame{ aspect-ratio: 3/4; }
+  .person-role{
+    color: var(--clay);
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.05rem;
+    display:block;
+    margin-bottom: 10px;
+  }
+  .person-text h3{ font-size: clamp(1.7rem, 3.4vw, 2.3rem); margin-bottom: 18px; }
+  .person-text p{ color: var(--cream-dim); margin-bottom: 14px; }
+  .person-facts{
+    list-style:none; margin: 22px 0 0; padding:0;
+    display:grid; gap: 8px;
+    border-top: 1px solid var(--line);
+    padding-top: 18px;
+  }
+  .person-facts li{
+    display:flex; gap: 10px;
+    font-size: 0.92rem;
+    color: var(--cream-dim);
+  }
+  .person-facts li strong{ color: var(--cream); min-width: 110px; font-weight: 600; }
+
+  .duo-block{
+    margin-top: clamp(56px, 8vw, 96px);
+    padding-top: clamp(56px, 8vw, 96px);
+    border-top: 1px solid var(--line);
+  }
+  .duo-block:first-of-type{ margin-top:0; padding-top:0; border-top:none; }
+
+  .duo-strip{
+    text-align:center;
+    max-width: 640px;
+    margin: 0 auto clamp(56px,8vw,96px);
+  }
+  .duo-strip p{
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+    color: var(--cream);
+  }
+
+  /* ---------- História ---------- */
+  .story{
+    display:grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: clamp(30px,6vw,72px);
+    align-items:center;
+  }
+  @media (max-width:860px){ .story{ grid-template-columns: 1fr; } }
+  .story-media .img-frame{ aspect-ratio: 4/5; }
+  .story-text p{ color: var(--cream-dim); margin-bottom: 16px; }
+  .story-text p:last-child{ margin-bottom:0; }
+
+  /* ---------- Galeria ---------- */
+  .gallery-grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 160px;
+    gap: 10px;
+  }
+  .gallery-grid .img-frame{ height:100%; }
+  .g-a{ grid-column: span 2; grid-row: span 2; }
+  .g-b{ grid-column: span 2; grid-row: span 1; }
+  .g-c{ grid-column: span 1; grid-row: span 1; }
+  @media (max-width: 760px){
+    .gallery-grid{ grid-template-columns: repeat(2,1fr); grid-auto-rows: 140px; }
+    .g-a{ grid-column: span 2; grid-row: span 2; }
+    .g-b, .g-c{ grid-column: span 1; }
+  }
+
+  /* ---------- Prova social ---------- */
+  .proof-strip{
+    display:flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 48px;
+  }
+  .proof-stat{ min-width: 140px; }
+  .proof-stat .num{ font-family: var(--font-display); font-size: 2.1rem; color: var(--gold); display:block; }
+  .proof-stat .label{ color: var(--cream-dim); font-size: 0.88rem; }
+
+  .testimonial-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 860px){ .testimonial-grid{ grid-template-columns: 1fr; } }
+  .testimonial-card{
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 26px;
+  }
+  .testimonial-card p.quote{
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--cream);
+    font-size: 1.05rem;
+    margin-bottom: 18px;
+  }
+  .testimonial-author{ display:flex; justify-content:space-between; color: var(--cream-dim); font-size: 0.86rem; }
+
+  /* ---------- Social ---------- */
+  .social-band{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 44px var(--pad);
+    background: var(--surface);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .social-band h3{ font-size: 1.6rem; }
+  .social-icons{ display:flex; gap: 14px; }
+  .social-icons a{
+    width: 46px; height:46px;
+    display:flex; align-items:center; justify-content:center;
+    border: 1px solid var(--line-strong);
+    border-radius: 50%;
+    transition: border-color .2s ease, color .2s ease;
+  }
+  .social-icons a:hover{ border-color: var(--gold); color: var(--gold); }
+
+  /* ---------- CTA final ---------- */
+  .final-cta{
+    text-align:center;
+    background: radial-gradient(circle at 50% 0%, #2B231C 0%, var(--bg-alt) 70%);
+  }
+  .final-cta h2{ font-size: clamp(2rem, 4.4vw, 3rem); max-width: 700px; margin: 0 auto 18px; }
+  .final-cta p{ color: var(--cream-dim); max-width: 520px; margin: 0 auto 34px; font-size: 1.05rem; }
+  .final-cta-actions{ display:flex; gap: 16px; justify-content:center; flex-wrap:wrap; }
+
+  /* ---------- Footer ---------- */
+  footer{
+    padding: 48px 0 110px;
+    border-top: 1px solid var(--line);
+    color: var(--cream-dim);
+    font-size: 0.86rem;
+  }
+  @media (min-width: 621px){ footer{ padding-bottom: 48px; } }
+  .footer-grid{
+    display:flex;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  .footer-cols{ display:flex; gap: 60px; flex-wrap: wrap; }
+  .footer-col h5{ color: var(--cream); font-weight:600; font-size: 0.9rem; margin-bottom: 12px; }
+  .footer-col ul{ list-style:none; margin:0; padding:0; display:grid; gap:8px; }
+  .footer-col a:hover{ color: var(--cream); }
+  .footer-bottom{ border-top: 1px solid var(--line); padding-top: 20px; }
+
+  /* ---------- Botão flutuante mobile ---------- */
+  .float-cta{
+    position: fixed;
+    left: 16px; right: 16px; bottom: 16px;
+    z-index: 60;
+    display:none;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  }
+  @media (max-width: 620px){ .float-cta{ display:flex; } }
+
+  /* ---------- Reveal on scroll ---------- */
+  .reveal{
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.is-visible{ opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; }
+  }
+
+  .sr-only{
+    position:absolute; width:1px; height:1px;
+    padding:0; margin:-1px; overflow:hidden;
+    clip: rect(0,0,0,0); white-space:nowrap; border:0;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="#top" class="logo">
+      <svg class="brand-mark" width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M16 4C9 7 5 13 5 19c0 5 4.5 9 11 9s11-4 11-9c0-6-4-12-11-15Z" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M16 6.5v21" stroke="currentColor" stroke-width="1.1"/>
+      </svg>
+      BIOMA<span>.</span>
+    </a>
+    <nav aria-label="Navegação principal">
+      <ul class="nav-links">
+        <li><a href="#produtos">Cardápio</a></li>
+        <li><a href="#por-que">Diferenciais</a></li>
+        <li><a href="#quem-somos">Quem somos</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <a href="#produtos" class="btn btn-ghost">Ver cardápio</a>
+      <a href="DELIVERY_LINK_PRATOS" class="btn btn-primary">Pedir agora</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-label="Abertura">
+    <div class="hero-media">
+      <!-- Substituir por: <img src="hero.jpg" alt="Prato executivo montado, vista de cima"> -->
+      <div class="img-frame" role="img" aria-label="Espaço reservado para fotografia do prato principal">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          <span class="frame-label">[FOTO DO PRATO — imagem principal, alta resolução]</span>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="hero-inner">
+        <span class="hero-kicker">BIOMA — Cozinha de sabores &amp; memórias doces</span>
+        <h1>Comida de verdade, feita para você querer repetir.</h1>
+        <p class="lede">Um Brasil de sabores em cada criação: pratos executivos e sobremesas artesanais preparados com técnica, ingredientes bem escolhidos e o cuidado de quem vive de cozinha profissional.</p>
+        <div class="hero-actions">
+          <a href="DELIVERY_LINK_PRATOS" class="btn btn-primary">Pedir agora</a>
+          <a href="#quem-somos" class="btn btn-ghost">Conheça nosso trabalho</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <svg class="organic-divider" viewBox="0 0 1200 48" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 24 C150 4, 250 44, 400 24 S650 4, 800 24 S1050 44, 1200 20" fill="none" stroke="currentColor" stroke-width="1"/>
+  </svg>
+
+  <!-- ============ PRODUTOS ============ -->
+  <section id="produtos" class="section-pad" aria-label="Nossos produtos">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="section-tag">Cardápio</span>
+        <h2>O que sai da nossa cozinha</h2>
+        <p>Pratos pensados para o dia a dia e sobremesas para fechar com chave de ouro. Tudo preparado nas horas que antecedem a entrega.</p>
+      </div>
+
+      <div class="product-group">
+        <div class="product-group-title">
+          <h3>Pratos executivos</h3>
+          <span class="count" id="count-pratos"></span>
+        </div>
+        <div class="product-grid reveal" id="grid-pratos"></div>
+      </div>
+
+      <div class="product-group">
+        <div class="product-group-title">
+          <h3>Sobremesas</h3>
+          <span class="count" id="count-sobremesas"></span>
+        </div>
+        <div class="product-grid is-desserts reveal" id="grid-sobremesas"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ POR QUE NOSSA COMIDA ============ -->
+  <section id="por-que" class="section-pad section-alt" aria-label="Por que nossa comida">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="section-tag">Diferenciais</span>
+        <h2>O que muda no resultado do prato</h2>
+      </div>
+      <div class="why-grid reveal">
+        <div class="why-item">
+          <h4>Técnica</h4>
+          <p>Cada preparo segue um método pensado para entregar o mesmo sabor e a mesma textura toda vez que você pede.</p>
+        </div>
+        <div class="why-item">
+          <h4>Ingredientes</h4>
+          <p>Escolha criteriosa de fornecedores e respeito ao ponto certo de cada ingrediente, sem atalhos.</p>
+        </div>
+        <div class="why-item">
+          <h4>Cozinha profissional</h4>
+          <p>Processos organizados e higiene rigorosa — a mesma exigência de uma cozinha de restaurante aplicada a cada pedido.</p>
+        </div>
+        <div class="why-item">
+          <h4>Sabor</h4>
+          <p>No fim, a técnica só existe para um motivo: fazer uma comida que você realmente queira comer de novo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUEM SOMOS ============ -->
+  <section id="quem-somos" class="section-pad" aria-label="Quem está por trás da comida">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="section-tag">Quem somos</span>
+        <h2>Duas especialidades, uma mesma cozinha</h2>
+      </div>
+
+      <!-- ---- CHEF ---- -->
+      <div class="duo-block">
+        <div class="person reveal">
+          <div class="person-media">
+            <img src="images/rodrigo.jpg" alt="Rodrigo Martins, chef, de braços cruzados em ambiente de evento gastronômico" loading="lazy" style="width:100%; aspect-ratio:3/4; object-fit:cover; object-position:center 25%; border:1px solid var(--line);">
+          </div>
+          <div class="person-text">
+            <span class="person-role">Cozinha &amp; pratos executivos</span>
+            <h3>Rodrigo Martins</h3>
+            <p>Chef / Gastrônomo.</p>
+            <p>Minha trajetória na gastronomia foi construída dentro da cozinha, entre produção, operação, desenvolvimento de pratos e busca constante por melhores resultados. Ao longo dos anos, transformei a experiência prática em uma forma de enxergar a gastronomia que une técnica, organização, sabor e respeito pelo ingrediente.</p>
+            <p>Minha atuação vai além da execução de pratos. Trabalho também com desenvolvimento de cardápios, fichas técnicas, padronização de receitas, controle de custos, organização de produção e desenvolvimento de novos produtos — porque acredito que uma boa cozinha precisa entregar não apenas sabor, mas também consistência e identidade.</p>
+            <p>Tenho especial interesse pelo desenvolvimento de pratos que valorizem o produto e pela criação de experiências gastronômicas que façam sentido para quem está do outro lado da mesa. Da escolha do ingrediente à finalização, cada etapa tem um propósito. Hoje, parte do meu trabalho está voltada para transformar esse conhecimento de cozinha profissional em produtos que chegam diretamente ao consumidor — pratos executivos, sobremesas e outras criações — levando para o delivery o mesmo cuidado que existe dentro de uma cozinha profissional.</p>
+            <p style="font-family:var(--font-display); font-style:italic; color:var(--gold); font-size:1.05rem;">Gastronomia é técnica a serviço do sabor.</p>
+            <ul class="person-facts">
+              <li><strong>Especialidade</strong> Cozinha brasileira e italiana; desenvolvimento de cardápios, fichas técnicas e padronização de receitas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- CONFEITEIRA ---- -->
+      <div class="duo-block">
+        <div class="person reverse reveal">
+          <div class="person-media">
+            <img src="images/laudja.png" alt="Laudja Pessoa, confeiteira, sorrindo em ambiente de restaurante" loading="lazy" style="width:100%; aspect-ratio:3/4; object-fit:cover; object-position:center 20%; border:1px solid var(--line);">
+          </div>
+          <div class="person-text">
+            <span class="person-role">Confeitaria &amp; sobremesas</span>
+            <h3>Laudja Pessoa</h3>
+            <p>Confeiteira.</p>
+            <p>Mais de 5 anos dedicados à confeitaria, com passagem pela hotelaria, onde aprendeu a aliar padronização e consistência à criação de sobremesas. Hoje desenvolve bolos e sobremesas clássicas e modernas, unindo técnica de confeitaria a apresentações que valorizam cada criação, vendidas diretamente pelo iFood.</p>
+            <ul class="person-facts">
+              <li><strong>Especialidade</strong> Bolos e sobremesas clássicas e modernas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="duo-strip reveal">
+        <p>Duas pessoas, duas especialidades, uma mesma proposta gastronômica.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NOSSA HISTÓRIA ============ -->
+  <section class="section-pad section-alt" aria-label="Nossa história">
+    <div class="wrap">
+      <div class="story reveal">
+        <div class="story-media">
+          <!-- Substituir por: <img src="bastidores.jpg" alt="Bastidores da cozinha durante o preparo"> -->
+          <div class="img-frame" role="img" aria-label="Espaço reservado para foto de bastidores da cozinha">
+            <div>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M4 14l4-4 4 4 4-6 4 6"/></svg>
+              <span class="frame-label">[FOTO DE BASTIDORES DA COZINHA]</span>
+            </div>
+          </div>
+        </div>
+        <div class="story-text">
+          <span class="section-tag">Nossa história</span>
+          <h2 style="margin-bottom:18px; font-size:clamp(1.8rem,3.4vw,2.4rem);">Da cozinha profissional para a sua mesa</h2>
+          <p>[ADICIONAR HISTÓRIA — como Rodrigo e Laudja decidiram unir cozinha e confeitaria em um negócio próprio]</p>
+          <p>[ADICIONAR HISTÓRIA — o que motivou levar a experiência de cozinha profissional direto para o cliente através do delivery]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALERIA ============ -->
+  <section id="galeria" class="section-pad" aria-label="Galeria de fotos">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="section-tag">Galeria</span>
+        <h2>Um pouco do que sai da cozinha</h2>
+      </div>
+      <div class="gallery-grid reveal">
+        <div class="img-frame g-a" role="img" aria-label="Espaço reservado para foto de prato em destaque">
+          <div><span class="frame-label">[FOTO — PRATO EM DESTAQUE]</span></div>
+        </div>
+        <div class="img-frame g-b" role="img" aria-label="Espaço reservado para foto de sobremesa">
+          <div><span class="frame-label">[FOTO — SOBREMESA]</span></div>
+        </div>
+        <div class="img-frame g-c" role="img" aria-label="Espaço reservado para foto da cozinha">
+          <div><span class="frame-label">[FOTO — COZINHA]</span></div>
+        </div>
+        <div class="img-frame g-c" role="img" aria-label="Espaço reservado para foto de bastidores">
+          <div><span class="frame-label">[FOTO — BASTIDORES]</span></div>
+        </div>
+        <div class="img-frame g-b" role="img" aria-label="Espaço reservado para foto de finalização do prato">
+          <div><span class="frame-label">[FOTO — FINALIZAÇÃO]</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROVA SOCIAL ============ -->
+  <section class="section-pad section-alt" aria-label="Avaliações de clientes">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="section-tag">Quem já pediu</span>
+        <h2>O que dizem sobre a comida</h2>
+      </div>
+
+      <div class="proof-strip reveal">
+        <div class="proof-stat">
+          <span class="num">[—]</span>
+          <span class="label">nota média nas plataformas</span>
+        </div>
+        <div class="proof-stat">
+          <span class="num">[—]</span>
+          <span class="label">pedidos entregues</span>
+        </div>
+        <div class="proof-stat">
+          <span class="num">[—]</span>
+          <span class="label">avaliações recebidas</span>
+        </div>
+      </div>
+
+      <div class="testimonial-grid reveal">
+        <div class="testimonial-card">
+          <p class="quote">[ADICIONAR DEPOIMENTO DE CLIENTE]</p>
+          <div class="testimonial-author"><span>[Nome do cliente]</span><span>[Plataforma]</span></div>
+        </div>
+        <div class="testimonial-card">
+          <p class="quote">[ADICIONAR DEPOIMENTO DE CLIENTE]</p>
+          <div class="testimonial-author"><span>[Nome do cliente]</span><span>[Plataforma]</span></div>
+        </div>
+        <div class="testimonial-card">
+          <p class="quote">[ADICIONAR DEPOIMENTO DE CLIENTE]</p>
+          <div class="testimonial-author"><span>[Nome do cliente]</span><span>[Plataforma]</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOCIAL ============ -->
+  <div class="social-band reveal">
+    <h3>Acompanhe nossa cozinha</h3>
+    <div class="social-icons">
+      <a href="INSTAGRAM_LINK" aria-label="Abrir Instagram">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+      </a>
+      <a href="WHATSAPP_LINK" aria-label="Abrir WhatsApp">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M21 11.5a8.38 8.38 0 0 1-8.8 8.4 8.5 8.5 0 0 1-4-1L3 20l1.1-5.1a8.4 8.4 0 0 1-1-4A8.4 8.4 0 0 1 11.6 3a8.5 8.5 0 0 1 9.4 8.5Z"/></svg>
+      </a>
+      <a href="DELIVERY_LINK_PRATOS" aria-label="Abrir plataforma de delivery">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 7h18l-2 12H5L3 7Z"/><path d="M8 7V5a4 4 0 0 1 8 0v2"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- ============ CTA FINAL ============ -->
+  <section class="section-pad final-cta" aria-label="Chamada final">
+    <div class="wrap">
+      <h2 class="reveal">Agora só falta escolher o que vai pedir.</h2>
+      <p class="reveal">Pratos executivos, sobremesas artesanais e uma cozinha que trata cada pedido como se fosse pra mesa de casa.</p>
+      <div class="final-cta-actions reveal">
+        <a href="DELIVERY_LINK_PRATOS" class="btn btn-primary">Pedir agora</a>
+        <a href="WHATSAPP_LINK" class="btn btn-ghost">Fazer pedido pelo WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <p class="logo" style="margin-bottom:10px;">
+          <svg class="brand-mark" width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M16 4C9 7 5 13 5 19c0 5 4.5 9 11 9s11-4 11-9c0-6-4-12-11-15Z" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M16 6.5v21" stroke="currentColor" stroke-width="1.1"/>
+          </svg>
+          BIOMA<span>.</span>
+        </p>
+        <p style="max-width:280px;">Cozinha de sabores &amp; memórias doces. Um Brasil de sabores em cada criação.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h5>Cardápio</h5>
+          <ul>
+            <li><a href="#produtos">Pratos executivos</a></li>
+            <li><a href="#produtos">Sobremesas</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Peça já</h5>
+          <ul>
+            <li><a href="DELIVERY_LINK_PRATOS">Delivery — pratos</a></li>
+            <li><a href="DELIVERY_LINK_SOBREMESAS">Delivery — sobremesas</a></li>
+            <li><a href="WHATSAPP_LINK">WhatsApp</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Redes</h5>
+          <ul>
+            <li><a href="INSTAGRAM_LINK">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> BIOMA. Todos os direitos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="DELIVERY_LINK_PRATOS" class="btn btn-primary btn-block float-cta">Pedir agora</a>
+
+<script>
+/* =========================================================
+   DADOS DOS PRODUTOS
+   Para adicionar um novo produto, copie um objeto do array
+   correspondente (pratos ou sobremesas) e edite os campos:
+
+   name          -> nome do produto
+   description   -> descrição curta (1 a 2 frases)
+   price         -> texto do preço, ex: "R$ 32,90". Deixe "" para ocultar.
+   image         -> caminho da foto real. Enquanto vazio, mostra o placeholder.
+   deliveryLink  -> link de pedido específico deste produto (opcional).
+                    Se vazio, usa o link geral da categoria.
+   available     -> true / false. Se false, aparece como indisponível.
+   featured      -> true / false. Produtos em destaque ocupam mais espaço no grid.
+   ========================================================= */
+
+const PRODUCTS = {
+  pratos: [
+    {
+      name: "[NOME DO PRATO]",
+      description: "[ADICIONAR DESCRIÇÃO DO PRATO]",
+      price: "",
+      image: "",
+      deliveryLink: "",
+      available: true,
+      featured: true
+    },
+    {
+      name: "[NOME DO PRATO]",
+      description: "[ADICIONAR DESCRIÇÃO DO PRATO]",
+      price: "",
+      image: "",
+      deliveryLink: "",
+      available: true,
+      featured: false
+    },
+    {
+      name: "[NOME DO PRATO]",
+      description: "[ADICIONAR DESCRIÇÃO DO PRATO]",
+      price: "",
+      image: "",
+      deliveryLink: "",
+      available: true,
+      featured: false
+    }
+  ],
+  sobremesas: [
+    {
+      name: "Bolo de chocolate com morangos",
+      description: "Camadas de chocolate cremoso finalizadas com morangos frescos — nosso pedido mais pedido para presentear.",
+      price: "",
+      image: "images/sobremesas/cake-morango-fita.jpg",
+      deliveryLink: "",
+      available: true,
+      featured: true
+    },
+    {
+      name: "Caixa de docinhos sortidos",
+      description: "Seleção de docinhos artesanais: brigadeiro, morango do amor, chocolate branco e sabores especiais da casa.",
+      price: "",
+      image: "images/sobremesas/caixa-docinhos.jpg",
+      deliveryLink: "",
+      available: true,
+      featured: true
+    },
+    {
+      name: "Copo brownie com doce de leite",
+      description: "Camadas de brownie, creme e doce de leite, finalizado com chantilly e pedaço de chocolate.",
+      price: "",
+      image: "images/sobremesas/copo-brownie-doce-de-leite.jpg",
+      deliveryLink: "",
+      available: true,
+      featured: false
+    },
+    {
+      name: "Copo brownie caramelizado",
+      description: "Brownie em camadas com creme e calda caramelizada, coberto com chantilly.",
+      price: "",
+      image: "images/sobremesas/copo-brownie-caramelo.jpg",
+      deliveryLink: "",
+      available: true,
+      featured: false
+    },
+    {
+      name: "Fatia de bolo branco",
+      description: "Bolo branco fofinho com recheio cremoso — [CONFIRMAR SABOR DO RECHEIO].",
+      price: "",
+      image: "images/sobremesas/fatia-branca-recheio-vermelho.jpg",
+      deliveryLink: "",
+      available: true,
+      featured: false
+    },
+    {
+      name: "Fatia de brownie com brigadeiro",
+      description: "Brownie denso coberto com brigadeiro branco e ao leite, finalizado à mão.",
+      price: "",
+      image: "images/sobremesas/fatia-brownie-brigadeiro.jpg",
+      deliveryLink: "",
+      available: true,
+      featured: false
+    },
+    {
+      name: "Potinho de camadas",
+      description: "Camadas coloridas de bolo e creme em potinho individual — [CONFIRMAR SABOR].",
+      price: "",
+      image: "images/sobremesas/potinho-colorido.jpg",
+      deliveryLink: "",
+      available: true,
+      featured: false
+    },
+    {
+      name: "Fatia de chocolate com creme branco",
+      description: "Camadas de bolo de chocolate intercaladas com recheio cremoso branco.",
+      price: "",
+      image: "images/sobremesas/fatia-chocolate-creme-branco.jpg",
+      deliveryLink: "",
+      available: true,
+      featured: false
+    },
+    {
+      name: "Copo doce com brownie",
+      description: "Creme aveludado em camadas com pedaços de brownie — no tamanho certo para fechar a refeição.",
+      price: "",
+      image: "images/sobremesas/copo-doce-brownie.jpg",
+      deliveryLink: "",
+      available: true,
+      featured: false
+    },
+    {
+      name: "Chocolate e Maracujá",
+      description: "Bolo de chocolate com recheio e cobertura de maracujá, finalizado com chocolate granulado.",
+      price: "",
+      image: "images/sobremesas/fatia-chocolate-maracuja.jpg",
+      deliveryLink: "",
+      available: true,
+      featured: false
+    },
+    {
+      name: "Bombons trufados",
+      description: "Bombons artesanais com acabamento pintado à mão — receita da casa.",
+      price: "",
+      image: "images/sobremesas/bombons-trufados.jpg",
+      deliveryLink: "",
+      available: true,
+      featured: false
+    }
+  ]
+};
+
+const CATEGORY_DELIVERY_LINK = {
+  pratos: "DELIVERY_LINK_PRATOS",
+  sobremesas: "DELIVERY_LINK_SOBREMESAS"
+};
+
+function placeholderFrame(label){
+  return `<div class="img-frame" role="img" aria-label="Espaço reservado para foto do produto: ${label}">
+    <div>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" width="30" height="30" style="margin:0 auto 10px;"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="8.5" cy="10.5" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
+      <span class="frame-label">[FOTO DO PRODUTO]</span>
+    </div>
+  </div>`;
+}
+
+function renderProducts(categoryKey, gridId, countId){
+  const grid = document.getElementById(gridId);
+  const countEl = document.getElementById(countId);
+  const items = PRODUCTS[categoryKey];
+  if (!grid || !items) return;
+
+  countEl.textContent = items.length + (items.length === 1 ? " item" : " itens");
+
+  grid.innerHTML = items.map(item => {
+    const link = item.deliveryLink || CATEGORY_DELIVERY_LINK[categoryKey] || "#";
+    const media = item.image
+      ? `<img src="${item.image}" alt="${item.name}" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;">`
+      : placeholderFrame(item.name);
+
+    return `
+      <article class="product-card ${item.featured ? "is-featured" : ""} ${!item.available ? "product-unavailable" : ""}">
+        ${media}
+        <div class="product-body">
+          <div class="product-top">
+            <h4>${item.name}</h4>
+            ${item.price ? `<span class="product-price">${item.price}</span>` : ""}
+          </div>
+          <p class="product-desc">${item.description}</p>
+          ${!item.available ? `<span class="product-tag">Indisponível no momento</span>` : ""}
+          <a href="${link}" class="btn btn-primary product-order">${item.available ? "Pedir" : "Indisponível"}</a>
+        </div>
+      </article>
+    `;
+  }).join("");
+}
+
+renderProducts("pratos", "grid-pratos", "count-pratos");
+renderProducts("sobremesas", "grid-sobremesas", "count-sobremesas");
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Scroll reveal — um único tipo de efeito, discreto
+if ("IntersectionObserver" in window){
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting){
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+} else {
+  document.querySelectorAll(".reveal").forEach(el => el.classList.add("is-visible"));
+}
+</script>
+
+</body>
+</html>
